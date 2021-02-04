@@ -20,7 +20,10 @@ Xquery permite no solo consultas, sino inserts, updates, deletes, índices, etc.
 
 # Ejecución
 - Arrancar el servidor (basexserver o basexhttp, recomiendo este último)
-- El código utiliza los parámetros de host (localhost), puerto (1984), usuario y contraseña (admin en ambos casos) para conectarse. Están hardcodeados, y dos veces
+- Ejecutar el código (con python, no lo he probado con python3)
+
+## Detalles
+- El código utiliza los parámetros de host (localhost), puerto (1984), usuario y contraseña (admin en ambos casos) para conectarse. Están hardcodeados, y dos veces (eso está feo)
 - Una cosa interesante es comentar la línea del drop y ver cómo:
-    - La base de datos sigue accesible en la gui
-    - Su contenido se puede visualizar en la interfaz web
+    - La base de datos que se crea mediante código sigue accesible en la gui
+    - Su contenido se puede visualizar en la interfaz web (http://localhost:8984/)
