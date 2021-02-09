@@ -45,6 +45,7 @@ def crud():
         into //body
         """)
         insert.execute()
+        print(session.info())
         print("Documento tras insertar article con div:\n"+ session.execute("xquery serialize(html)"))
 
         # update - contenido
@@ -53,6 +54,7 @@ def crud():
             with 'Ejemplo de elemento insertado (article con atributo, el article contiene un div) --modificado'
         """)
         update_contenido.execute()
+        print(session.info())
         print("Documento tras actualizar el contenido del div:\n" + session.execute("xquery serialize(html)"))
 
         # update - renombrar etiqueta
@@ -60,13 +62,15 @@ def crud():
             rename node //div as 'section'
         """)
         renombrar_etiqueta.execute()
+        print(session.info())
         print("Documento tras cambiar el div por un section:\n" + session.execute("xquery serialize(html)"))
 
         # delete
         delete = session.query("""
             delete node //article
         """)
-        print delete.execute()
+        print(delete.execute())
+        print(session.info())
         print("Documento tras eliminar el article:\n" + session.execute("xquery serialize(html)"))
 
         # drop database

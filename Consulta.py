@@ -17,7 +17,7 @@ def consulta():
         query = session.query(consulta_xquery)
 
         # imprimir resultado
-        print query.execute()
+        print(query.execute())
 
         # close query object
         query.close()

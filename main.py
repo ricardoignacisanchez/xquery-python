@@ -11,7 +11,7 @@ import socket
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     try:
-        consulta()
+        #consulta()
         crud()
     except socket.error:
         print("Error en la conexión. ¿Está basex levantado (basexserver)?")
